@@ -3,9 +3,7 @@ import configparser
 import os
 import subprocess 
 config = configparser.ConfigParser()
-config.read("config.ini")
+config.read("repoconfig.ini")
 Repo = config["Repo"]
-RepoName = config["Location"]
-print(list(Repo))
-IN=input("which repo would you like to update")
+RepoName = config["RepoName"]
 subprocess.run(["Rm -Rf ", RepoName, "&& Gitclone ", Repo])
