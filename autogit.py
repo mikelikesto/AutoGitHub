@@ -4,8 +4,8 @@ import os
 import subprocess 
 config = configparser.ConfigParser()
 config.read("config.ini")
-IP = config["IP"]
-print(list(IP))
-IN=input("Which computer would you like to connect to| ")
-ssh=(IP[IN])
-subprocess.run(["ssh", ssh])
+Repo = config["Repo"]
+RepoName = config["Location"]
+print(list(Repo))
+IN=input("which repo would you like to update")
+subprocess.run(["Rm -Rf ", RepoName, "&& Gitclone ", Repo])
